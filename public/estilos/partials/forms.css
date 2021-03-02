@@ -1,0 +1,43 @@
+
+.select-block label,
+.input-block label,
+.text-area-block label {
+    font-size: 1.6rem;
+    color: var(--color-text-complement);
+}
+
+.select-block select,
+.input-block input,
+.text-area-block textarea {
+    width: 100%;
+    height: 5.3rem;
+    margin-top: 1rem;
+    border-radius: .8rem;
+    background: var(--color-input-background);
+    border: 1 solid var(--color-line-in-white);
+    outline: 0; /*mostra qual objeto esta selecionado*/
+    padding: 0 1.6rem;
+    font: 1.6rem Archivo;
+}
+
+.text-area-block textarea {
+    padding: 1.2rem 1.6rem;
+    resize: vertical;
+   
+}
+
+.input-block,
+.text-area-block {
+    position: relative
+}
+.input-block:focus-within::after,
+.text-area-block:focus-within::after { /*cria um objeto quando se clica no input time*/
+    content: "";
+    width: calc(100% - 3rem);
+    background: var(--color-primary-light);
+    height: 0.4rem;
+    position: absolute; /*em conjunto com a posição relativa do .inputblock deixa objeto absoluto dentro do input*/
+    left: 1.3rem;
+    right: 1.3rem;
+    bottom: 0;
+}
